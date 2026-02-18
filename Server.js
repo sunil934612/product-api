@@ -9,8 +9,9 @@ app.get("/api/products", (req, res) => {
   res.json(products);
 });
 
-const PORT = 5000;
+// IMPORTANT for Render
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
